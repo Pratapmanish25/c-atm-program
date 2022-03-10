@@ -1,0 +1,57 @@
+using System;
+
+namespace ConsoleApp63
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int amount = 2500, deposit, withdraw;
+            int choice, pin = 1234;
+            Console.WriteLine("enter your pin number");
+           int  pi = int.Parse(Console.ReadLine());
+            if (pi == pin)
+            {
+                Console.WriteLine("**welcome to ATM");
+                Console.WriteLine("1.check balance");
+                Console.WriteLine("2. withdraw cash");
+                Console.WriteLine("3.deposit cash");
+                Console.WriteLine("4.quit");
+                Console.WriteLine("5.************");
+                Console.WriteLine("6.enter your choice");
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("your balance in rs:{0} ", amount);
+                        break;
+                    case 2:
+                        Console.WriteLine("enter the amount to withdraw");
+                        withdraw = int.Parse(Console.ReadLine());
+
+                        int total = amount - withdraw;
+                          Console.WriteLine("please collect your case");
+                            Console.WriteLine("your current balaqnce is {0}",total);
+                        break;
+                    case 3:
+                        Console.WriteLine("enter the amount to deposit");
+                        deposit = int.Parse(Console.ReadLine());
+                       int current = amount + deposit;
+                        Console.WriteLine("your amount balance is {0}",current);
+                        break;
+                    default:
+                        Console.WriteLine("wrong press key");
+                        break;
+
+                    
+                }
+            }
+            else
+            {
+
+                Console.WriteLine("thank for using out atm service");
+            }
+
+        }
+    }
+}
